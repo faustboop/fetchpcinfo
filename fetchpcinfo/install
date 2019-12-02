@@ -1,0 +1,19 @@
+#!/bin/bash
+
+SCREENFETCH=$(command -v screenfetch)
+NEOFETCH=$(command -v neofetch)
+HTOP=$(command -v htop)
+
+if [ "" == "$SCREENFETCH" ]; then
+    sudo apt-get --yes install screenfetch
+fi
+
+if [ "" == "$NEOFETCH" ]; then
+    sudo apt-get --yes install neofetch
+fi
+
+if [ "" == "$HTOP" ]; then
+    sudo apt-get --yes install htop
+fi
+
+sudo cp fetchpcinfo /usr/bin/
